@@ -1,0 +1,8 @@
+---
+- hosts: localhost
+  tasks:
+   - name: ensure the congiguration line is present 
+     lineinfile:
+       path: /etc/nginx/nginx.conf
+       line: 'clint_max_body_size 100m;'
+     become: yes
